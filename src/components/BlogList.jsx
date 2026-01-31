@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { blog_data, blogCategories } from '../../public/assets'
+import { blog_data, blogCategories } from '../assets/assets'
 import { motion, spring } from 'motion/react'
 import { BlogCard } from './BlogCard'
 
