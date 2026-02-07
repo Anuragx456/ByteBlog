@@ -1,13 +1,21 @@
-import jwt from "jsonwebtoken";
+import { initAuth } from "../lib/auth.js";
+import { fromNodeHeaders } from "better-auth/node";
 
-const auth = (req, res, next) => {
-    const token = req.headers.authorization;
-
+const auth = async (req, res, next) => {
     try {
-        jwt.verify(token, process.env.JWT_SECRET)
+        const authInstance = initAuth();
+        const session = await authInstance.api.getSession({
+            headers: fromNodeHeaders(req.headers)
+        });
+
+        if (!session) {
+            return res.json({success: false, message: "Unauthorized"});
+        }
+
+        req.user = session.user;
         next();
     } catch (error) {
-        res.json({success: false, message: "Invalid token"})
+        res.json({success: false, message: "Error validating session"});
     }
 }
 
