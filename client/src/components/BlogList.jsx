@@ -17,10 +17,12 @@ const BlogList = () => {
         blog.category.toLowerCase().includes(input.toLowerCase()))
     }
 
+    const allCategories = ['All', ...new Set(blogs.map(blog => blog.category))];
+
   return (
     <div>
-        <div class="flex justify-center gap-4 sm:gap-8 my-10 relative">
-            {blogCategories.map((item) => (
+        <div className="flex flex-wrap justify-center gap-4 sm:gap-8 my-10 relative">
+            {allCategories.map((item) => (
                 <div key={item} className='relative'>
                     <button onClick={() => setMenu(item)}
                     className={`cursor-pointer text-gray-500 ${menu === item && 'text-white px-4 py-0.9'}` }>

@@ -116,12 +116,20 @@ const AddBlog = () => {
           </div>
 
           <p className='mt-4'>Blog Category</p>
-          <select onChange={e => setCategory(e.target.value)} value={category} name="Category" className='mt-2 px-3 py-2 border text-gray-500 border-gray-300 outline-none rounded'>
+          <select onChange={e => setCategory(e.target.value)} value={blogCategories.includes(category) ? category : 'Other'} name="Category" className='mt-2 px-3 py-2 border text-gray-500 border-gray-300 outline-none rounded'>
             <option value="">Select Category</option>
             {blogCategories.map((item, index) => {
                 return <option key={index} value={item}>{item}</option>
             })}
+            <option value="Other">Other</option>
           </select>
+          {
+            (!blogCategories.includes(category) || category === 'Other') && (
+              <input type="text" placeholder='Enter custom category' required 
+              className='w-full max-w-lg mt-2 p-2 border border-gray-300 outline-none rounded' 
+              onChange={(e) => setCategory(e.target.value)} value={category === 'Other' ? '' : category}/>
+            )
+          }
 
           <div className='flex gap-2 mt-4'>
             <p>Pubkish Now</p>
