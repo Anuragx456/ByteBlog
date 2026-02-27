@@ -2,9 +2,12 @@ import { createContext, useContext, useEffect, useState } from 'react';
 import axios from "axios";
 import { useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
+import { useSession, signOut } from '../lib/auth-client';
+import Loader from '../components/Loader';
 
 
 axios.defaults.baseURL = import.meta.env.VITE_BASE_URL;
+axios.defaults.withCredentials = true;
 
 
 const AppContext = createContext();
@@ -12,8 +15,8 @@ const AppContext = createContext();
 export const AppProvider = ({ children }) => {
 
     const navigate = useNavigate();
+    const { data: session, isPending } = useSession();
 
-    const [token, setToken] = useState(localStorage.getItem('token') || null);
     const [blogs, setBlogs] = useState([]);
     const [input, setInput] = useState("");
 
@@ -28,16 +31,19 @@ export const AppProvider = ({ children }) => {
 
     useEffect(() => {
         fetchBlogs();
-        const token = localStorage.getItem('token')
-        if(token){
-            setToken(token)
-            axios.defaults.headers.common['Authorization'] = `${token}`;
-        }
     }, [])
     
+    const logout = async () => {
+        await signOut();
+        navigate('/');
+    }
     
+    if (isPending) {
+        return <Loader />;
+    }
+
     const value = {
-        axios, navigate, token, setToken, blogs, setBlogs, input, setInput
+        axios, navigate, token: session, setToken: () => {}, blogs, setBlogs, input, setInput, logout, user: session?.user
     };
 
     return (

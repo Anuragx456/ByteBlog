@@ -3,12 +3,14 @@ import './index.css'
 import App from './App.jsx'
 import { BrowserRouter } from 'react-router-dom'
 import { AppProvider } from './context/AppContext.jsx'
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <AppProvider>
       <App />
+      <SpeedInsights />
     </AppProvider>
   </BrowserRouter>
 )

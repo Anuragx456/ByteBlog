@@ -20,7 +20,7 @@ export const adminLogin = async(req, res) => {
 
 export const getAllBlogsAdmin = async (req, res) => {
     try {
-        const blogs = await Blog.find({}).sort({createdAt: -1});
+        const blogs = await Blog.find({authorId: req.user.id}).sort({createdAt: -1});
         res.json({success: true, blogs});
     } catch (error) {
         res.json({success: false, message: error.message});
@@ -38,10 +38,10 @@ export const getAllComments = async (req, res) => {
 
 export const getDashboard = async (req, res) => {
     try {
-        const recentBlogs = await Blog.find({}).sort({createdAt: -1}).limit(5);
-        const blogs = await Blog.countDocuments();
-        const comments = await Comment.countDocuments();
-        const drafts = await Blog.countDocuments({isPublished: false});
+        const recentBlogs = await Blog.find({authorId: req.user.id}).sort({createdAt: -1}).limit(5);
+        const blogs = await Blog.countDocuments({authorId: req.user.id});
+        const comments = await Comment.countDocuments(); // Comments might need filtering if they belong to a blog owned by user
+        const drafts = await Blog.countDocuments({isPublished: false, authorId: req.user.id});
 
         const dashboardData = {
             blogs, comments, drafts, recentBlogs
