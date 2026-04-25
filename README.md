@@ -1,4 +1,4 @@
-<img width="1919" height="1047" alt="image" src="https://github.com/user-attachments/assets/19c2261d-0ce8-40e2-987d-77aec31898ad" /># 📝 ByteBlog
+# 📝 ByteBlog
 
 <div align="center">
 
