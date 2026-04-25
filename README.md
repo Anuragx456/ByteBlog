@@ -213,10 +213,15 @@ Make sure you have the following installed:
 
 ## 📸 Screenshots
 <img width="1919" height="1047" alt="Screenshot 2026-04-25 131819" src="https://github.com/user-attachments/assets/a9d2d920-a3cc-4e8f-8187-1930f0d65ceb" />
+
 <img width="1917" height="1018" alt="Screenshot 2026-04-25 130427" src="https://github.com/user-attachments/assets/a8145648-3c86-45ec-89e3-93dd06a0363e" />
+
 <img width="1917" height="1010" alt="Screenshot 2026-04-25 130206" src="https://github.com/user-attachments/assets/44cefa91-e1f2-49ad-adb6-304da720c320" />
+
 <img width="1919" height="1031" alt="Screenshot 2026-04-25 125429" src="https://github.com/user-attachments/assets/f1a903d8-0540-42fc-ae66-4043b2f68c85" />
+
 <img width="1919" height="1043" alt="Screenshot 2026-04-25 124257" src="https://github.com/user-attachments/assets/63ce8a6f-db08-40fd-90b0-c31c11b7bbc0" />
+
 <img width="1919" height="1044" alt="Screenshot 2026-04-25 124250" src="https://github.com/user-attachments/assets/d6a54fde-d80f-4bbe-b8af-15e88986a976" />
 
 
