@@ -212,30 +212,35 @@ Make sure you have the following installed:
 ---
 
 ## 📸 Screenshots
-<img width="1919" height="1047" alt="Screenshot 2026-04-25 131819" src="https://github.com/user-attachments/assets/a9d2d920-a3cc-4e8f-8187-1930f0d65ceb" />
-
-<img width="1917" height="1018" alt="Screenshot 2026-04-25 130427" src="https://github.com/user-attachments/assets/a8145648-3c86-45ec-89e3-93dd06a0363e" />
-
-<img width="1917" height="1010" alt="Screenshot 2026-04-25 130206" src="https://github.com/user-attachments/assets/44cefa91-e1f2-49ad-adb6-304da720c320" />
-
-<img width="1919" height="1031" alt="Screenshot 2026-04-25 125429" src="https://github.com/user-attachments/assets/f1a903d8-0540-42fc-ae66-4043b2f68c85" />
-
-<img width="1919" height="1043" alt="Screenshot 2026-04-25 124257" src="https://github.com/user-attachments/assets/63ce8a6f-db08-40fd-90b0-c31c11b7bbc0" />
-
-<img width="1919" height="1044" alt="Screenshot 2026-04-25 124250" src="https://github.com/user-attachments/assets/d6a54fde-d80f-4bbe-b8af-15e88986a976" />
-
 
 ### Home Page
 
 > A clean and modern home page with featured blogs, category filters, and newsletter subscription.
+<img width="1919" height="1047" alt="HomePage" src="https://github.com/user-attachments/assets/e9c6a9ed-c77e-4589-b367-0a3583ad12ba" />
+
 
 ### Admin Dashboard
 
 > Comprehensive admin panel for managing blog posts, viewing statistics, and moderating comments.
+<img width="1917" height="1010" alt="Dashboard" src="https://github.com/user-attachments/assets/cac70921-e218-4c95-985e-4f4c16a587d2" />
+
 
 ### Blog Editor
 
 > Rich text editor powered by Quill for creating beautiful blog posts with image support.
+<img width="1919" height="1031" alt="Add Blogs" src="https://github.com/user-attachments/assets/ae872eca-2559-4071-a46a-4878fdc5172f" />
+
+### SignUp Page
+<img width="1919" height="1044" alt="SignUp Page" src="https://github.com/user-attachments/assets/89b3c878-bfd1-4e64-8b23-8a18dc50ee17" />
+
+### SignIn Page
+<img width="1919" height="1043" alt="SignIn Page" src="https://github.com/user-attachments/assets/cc4d3583-993b-4dca-ab54-717ea2aac6fc" />
+
+### Comments Page
+<img width="1917" height="1018" alt="Comments Page" src="https://github.com/user-attachments/assets/c0248a0e-f9f3-4e06-8782-d14193d7c2f2" />
+
+
+
 
 ---
 
